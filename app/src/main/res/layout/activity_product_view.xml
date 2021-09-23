@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductView"
+    android:orientation="vertical"
+    android:background="#EDEDED">
+
+
+    <LinearLayout
+        android:id="@+id/firstLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbar"
+                app:title="@string/app_name"
+                app:titleTextColor="#ffffffff"
+                android:background="@color/colorPrimary"
+                app:navigationIcon="@drawable/home_white"
+                android:onClick="backToHome">
+
+                <TextView
+                    android:id="@+id/product_cart_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cart_white"
+                    android:text="2"
+                    android:gravity="right"
+                    android:textColor="@color/red"
+                    android:layout_marginLeft="150dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/baloo"
+                    android:onClick="goToCart"
+                    />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </RelativeLayout>
+
+        <include
+            layout="@layout/search_bar_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/firstLinear">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/firstLinear"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/pv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:lineHeight="10dp"
+                android:text="Fruits And Vegetables "
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/pv_sdesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="30%"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+
+            <ImageView
+                android:id="@+id/pv_image"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="10dp"
+                />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pv_save_tag"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="You Save"
+                    android:textColor="@color/red"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/pv_saving"
+                    android:layout_width="54dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="00%"
+                    android:textColor="@color/red"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/add_to_wishlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="110dp"
+                    android:clickable="true"
+                    android:onClick="addToWishListFun"
+                    android:background="@color/mainColor"
+                    app:srcCompat="@drawable/wishlist_black_24dp"
+                    tools:ignore="VectorDrawableCompat"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="19dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/product_mrptext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textColor="@color/red"
+                    android:text="MRP."
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/pv_mrp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textColor="@color/red"
+                    android:text="999.00"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/product_rstext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="20dp"
+                    android:text="Rs."
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/pv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textColor="@color/black"
+                    android:text="699.00"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="20dp"
+                    android:text="Select Quantity"
+                    android:textSize="19sp" />
+
+                <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                    android:id="@+id/elegantbutton"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    app:textSize="9sp"
+                    app:initialNumber="1"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Add To Cart"
+                    android:textColor="@color/whiteColor"
+                    android:background="@drawable/custom_button"
+                    android:onClick="addToCartFun"/>
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Buy Now"
+                    android:background="@drawable/custom_button"
+                    android:textColor="@color/whiteColor"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#EAE7E7">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:background="#FFFFFF"
+                    app:cardCornerRadius="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/lineardiscription"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:id="@+id/description"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:text="Description"
+                            android:textSize="18sp"
+                            android:layout_marginTop="1dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn_arrow_down"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="100dp"
+                            android:background="@drawable/arrow_down"
+                            android:onClick="setExpandableview"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/expandableview"
+                        android:layout_width="match_parent"
+                        android:layout_height="207dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+                            android:id="@+id/desc_short"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="Best Quality Food and vagitable"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/fulldescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Fruits and vegetables contain important vitamins, minerals and plant chemicals. They also contain fibre. There are many varieties of fruit and vegetables available and many ways to prepare, cook and serve them. A diet high in fruit and vegetables can help protect you against cancer, diabetes and heart disease."
+                            />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#EAE7E7">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewfeatures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:background="#FFFFFF"
+                    app:cardCornerRadius="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/linearfeaturesdetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:id="@+id/featuresanddetail"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:text="Features &amp; Details"
+                            android:textSize="18sp"
+                            android:layout_marginTop="1dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/fdbtn_arrow_down"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="100dp"
+                            android:background="@drawable/arrow_down"
+                            android:onClick="setExpandableviewOnFeatures"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/expandableviewonfeatures"
+                        android:layout_width="match_parent"
+                        android:layout_height="207dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="Fresh Food and vagitable"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/explainfeaturs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Fruits and vegetables contain important vitamins, minerals and plant chemicals. They also contain fibre. There are many varieties of fruit and vegetables available and many ways to prepare, cook and serve them. A diet high in fruit and vegetables can help protect you against cancer, diabetes and heart disease."
+                            />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#EAE7E7">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardviewdisclaimer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:background="#FFFFFF"
+                    app:cardCornerRadius="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/lineardsclaimer"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:id="@+id/disclaimer"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:text="Disclaimer"
+                            android:textSize="18sp"
+                            android:layout_marginTop="1dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn_arrow_downdisclaimer"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="100dp"
+                            android:background="@drawable/arrow_down"
+                            android:onClick="setExpandableviewDisclaimer"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/expandableviewdisclaimer"
+                        android:layout_width="match_parent"
+                        android:layout_height="207dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
+
+
+
+                        <TextView
+                            android:id="@+id/fulltextdisclaimer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Despite our attempts to provide you with the most accurate information possible, the actual packaging, ingredientsand colour of the product may something vary. please read the label, directions and warnings carefully before use."
+                            />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Don't forget to Add"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/productview_bottom_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/productrating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Product Rating"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/productrating2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rate Product"
+                    android:textSize="15sp"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"/>
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="40dp"
+                    android:rating="4" />
+
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="write review"
+                    android:layout_marginTop="90dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/custom_button"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="start"
+        app:itemIconTint="@color/whiteColor"
+        app:itemTextColor="@color/whiteColor"
+        android:background="@color/colorPrimary"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

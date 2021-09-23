@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#ffffff">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="469dp"
+        android:src="@drawable/gujimartlogo"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_marginBottom="-60dp"
+        android:gravity="center_horizontal"
+        android:text="Welcome To Guju Mart"
+        android:textAlignment="center"
+        android:textColor="@color/mainColor"
+        android:textSize="30sp"
+        app:fontFamily="@font/aclonica" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:text="ગુજુ માર્ટમાં આપનું સ્વાગત છે"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_marginBottom="-40dp"
+        android:gravity="center_horizontal"
+
+        android:textAlignment="center"
+        android:textColor="@color/mainColor"
+        android:textSize="30sp"
+        app:fontFamily="@font/aclonica"
+        />
+</RelativeLayout>

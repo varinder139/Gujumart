@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="start"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="@color/whiteColor"
+        app:itemTextColor="@color/whiteColor"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/first_recycler_id"
+                android:layout_width="match_parent"
+                android:layout_height="110dp" />
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewpagerimageslider"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="0dp"
+                android:paddingStart="1dp"
+                android:paddingEnd="1dp"
+
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="All Categories "
+                android:textAllCaps="true"
+
+                android:textSize="15sp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/third_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="900dp"
+                android:layout_marginTop="10dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Top Brands, Great Prices"
+                android:textAllCaps="true"
+
+                android:textSize="15sp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/second_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="352dp"
+                android:layout_marginTop="10dp" />
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

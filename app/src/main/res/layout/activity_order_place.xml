@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderPlace"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Delivery Address"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        app:cardCornerRadius="20dp"
+        android:padding="5dp"
+        android:adjustViewBounds="true">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+                <TextView
+                    android:id="@+id/op_profile_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name: your Name"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_margin="10dp"/>
+                <TextView
+                    android:id="@+id/op_profile_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile 9XXXXXXXXX"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_margin="10dp"/>
+                <TextView
+                    android:id="@+id/op_profile_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="E-mail: abc@gmail.com"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_margin="10dp"/>
+
+                <TextView
+                    android:id="@+id/op_profile_pincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pinode 3800XX"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_margin="10dp"/>
+                <TextView
+                    android:id="@+id/op_profile_district"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="District: your district"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_margin="10dp"/>
+                <TextView
+                    android:id="@+id/op_profile_fullAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Full Address"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_margin="10dp"/>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Select A Payment Option "
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginBottom="10dp"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/radioGroup"
+        android:layout_marginTop="10dp">
+        <RadioButton
+            android:id="@+id/radio_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cash On Delivery"
+            android:onClick="checkButton"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/radio_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pay Online"
+            android:onClick="checkButton"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/final_totalAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Total Payable Amount is = 0"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/red"/>
+
+    <Button
+        android:id="@+id/final_place_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Order Placed"
+        android:onClick="finalOrderPlaced"/>
+    <Button
+        android:id="@+id/final_backToCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Back To Cart" />
+
+    <Button
+        android:id="@+id/final_cancel_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Order cancel" />
+
+
+</LinearLayout>

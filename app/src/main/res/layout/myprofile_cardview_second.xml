@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+android:orientation="vertical"
+    android:background="#EEF2F3">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        app:cardCornerRadius="20dp"
+        android:padding="5dp"
+        android:adjustViewBounds="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name: your Name"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/profile_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mobile 9XXXXXXXXX"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/profile_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="E-mail: abc@gmail.com"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_margin="10dp"/>
+
+            <TextView
+                android:id="@+id/profile_pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pinode 3800XX"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_margin="10dp"/>
+            <TextView
+                android:id="@+id/profile_district"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="District: your district"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_margin="10dp"/>
+            <TextView
+                android:id="@+id/profile_fullAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full Address"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_margin="10dp"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_update_pro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Update"
+            android:background="@color/buttonColor"
+            />
+
+            <Button
+                android:id="@+id/btn_dlt_adds"
+                android:layout_alignLeft="@+id/btn_update_pro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="Delete"
+                android:background="@color/buttonColor"
+                />
+
+        </LinearLayout>
+            <Button
+                android:id="@+id/btn_use_address"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="  Use This Address for Delivery  "
+                android:background="@color/buttonColor"
+                />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
